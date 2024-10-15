@@ -5,13 +5,13 @@ const Header = ({openPopup}) => {
     const  [isMenuOpen, setIsMenuOpen] = React.useState(false);
     
   return (
-    <header class="pb-6 bg-white lg:pb-0">
+    <header class="pb-0 bg-blue-500 lg:pb-0">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* <!-- lg+ --> */}
-        <nav class="flex items-center justify-between h-16 lg:h-20">
+        <nav class="flex items-center justify-between h-16 lg:h-16 border-b lg:border-b">
             <div class="flex-shrink-0">
                 <a href="#" title="" class="flex">
-                    <h1 className="font-bold text-2xl">Alumini Portal</h1>
+                    <h1 className="font-bold text-white text-2xl">Alumini Portal</h1>
                 </a>
             </div>
 
@@ -27,35 +27,27 @@ const Header = ({openPopup}) => {
                 </svg>
             </button>
 
-            <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-                <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a>
+            <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-6">
 
-                <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a>
+                {/* <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a> */}
 
-                <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a>
-
-                <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a>
+                <button onClick={openPopup} class="hidden md:block inline-flex justify-center px-8 py-2 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-full tems-center hover:bg-blue-700 focus:bg-blue-700">Sign in</button>
             </div>
 
-            <button onClick={openPopup} class="hidden md:block inline-flex justify-center px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700">Login Now</button>        
+            <button onClick={openPopup} class="hidden md:block inline-flex justify-center px-8 py-2 ml-4 text-base font-semibold text-white transition-all duration-200 bg-green-600 border border-transparent rounded-full tems-center hover:bg-green-400 focus:bg-green-700">Sign  Up</button>        
             </nav>
 
         {/* <!-- xs to lg --> */}
-        {isMenuOpen && <nav class="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
+        {isMenuOpen && <nav class="pt-0 pb-6 lg:hidden">
             <div class="flow-root">
                 <div class="flex flex-col px-6 -my-2 space-y-1">
-                    <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a>
-
-                    <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a>
-
-                    <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a>
-
-                    <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a>
+                    {/* <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Menu </a> */}
                 </div>
             </div>
 
-            <div class="px-6 mt-6">
-            <button onClick={openPopup} class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700">Login Now</button>            
+            <div class="px-6 mt-6 ml-4">
+            <button onClick={openPopup} class="inline-flex justify-center px-8 py-2 ml-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-full tems-center hover:bg-blue-700 focus:bg-blue-700">Sign In</button>            
+            <button onClick={openPopup} class="inline-flex justify-center px-8 py-2 ml-4 text-base font-semibold text-white transition-all duration-200 bg-green-600 border border-transparent rounded-full tems-center hover:bg-green-400 focus:bg-green-700">Sign Up</button>
             </div>
         </nav>}
     </div>
